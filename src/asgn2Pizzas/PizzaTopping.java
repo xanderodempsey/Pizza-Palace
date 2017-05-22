@@ -25,16 +25,22 @@ public enum PizzaTopping {
 	 * A enumeration that represents a pizza topping 
 	 * @param cost the cost of the pizza topping
 	 */
-	PizzaTopping(double cost){
+	PizzaTopping(double cost)
+	{
+		
 		this.cost = cost;
+		
 	}
 
 	/**
 	 * Returns the cost of a topping
 	 * @return the cost of the selected topping
 	 */
-	public double getCost(){
+	public double getCost()
+	{
+		
 		return cost;
+		
 	}
 	
 

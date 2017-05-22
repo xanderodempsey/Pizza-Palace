@@ -1,6 +1,8 @@
 package asgn2Pizzas;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import asgn2Exceptions.PizzaException;
 
@@ -12,7 +14,7 @@ import asgn2Exceptions.PizzaException;
  *  The margherita pizza has certain toppings listed in Section 5.1 of the Assignment Specification Document.  
  *  A description of the class's fields and their constraints is provided in Section 5.1 of the Assignment Specification.
  * 
- * @author Person A
+ * @author Daniel Larmar
  *
  */
 public class MargheritaPizza extends Pizza {
@@ -34,8 +36,16 @@ public class MargheritaPizza extends Pizza {
 	 * @throws PizzaException if supplied parameters are invalid 
 	 *
 	 */
-	public MargheritaPizza(int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException {
-		// TO DO
+	
+	// Static List of Toppings
+	public static ArrayList<PizzaTopping> Toppings = new ArrayList<PizzaTopping>(Arrays.asList(PizzaTopping.TOMATO,PizzaTopping.CHEESE));;
+	
+	public MargheritaPizza(int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException 
+	{
+		
+		// Store Pizza variables
+		super(quantity,orderTime,deliveryTime,"PZM",8);
+
 	}
 
 }
