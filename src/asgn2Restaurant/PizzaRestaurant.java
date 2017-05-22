@@ -3,11 +3,10 @@ package asgn2Restaurant;
 import java.util.ArrayList;
 
 import asgn2Customers.Customer;
-import asgn2Pizzas.Pizza;
+import asgn2Exceptions.CustomerException;
 import asgn2Exceptions.LogHandlerException;
 import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
-
 
 /**
  * This class acts as a ‘model’ of a pizza restaurant. It contains an ArrayList of Pizza objects and an ArrayList of  Customer objects.
@@ -35,9 +34,12 @@ public class PizzaRestaurant {
 	 * <P> POST: The customers and pizzas fields are initialized to an empty state
 	 * 
 	 */
-	public PizzaRestaurant() {
+	public PizzaRestaurant() 
+	{
+		
 		customers = new ArrayList<>();
-		pizzas = new ArrayList<>();	
+		pizzas = new ArrayList<>();
+		
 	}
 
 	/**
@@ -55,10 +57,13 @@ public class PizzaRestaurant {
 	 * @throws LogHandlerException If there was a problem with the log file not related to the semantic errors above (passed by another class).
      *
 	 */
-	public boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException{
+	public boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException
+	{
+		
 		customers = LogHandler.populateCustomerDataset(filename);
 		pizzas = LogHandler.populatePizzaDataset(filename);
 		return true;	
+		
 	}
 
 	/**
@@ -67,12 +72,15 @@ public class PizzaRestaurant {
 	 * @return The Customer object located at the specified index.
 	 * @throws CustomerException if index is invalid.
 	 */
-	public Customer getCustomerByIndex(int index) throws CustomerException{
+	public Customer getCustomerByIndex(int index) throws CustomerException
+	{
+		
 		try {
 			return customers.get(index);
 		} catch (IndexOutOfBoundsException i) {
 			throw new CustomerException("index is invalid.");
-		}	
+		}
+		
 	}
 	
 	/**
@@ -81,8 +89,21 @@ public class PizzaRestaurant {
 	 * @return The Pizza object located at the specified index.
 	 * @throws PizzaException if index is invalid.
 	 */	
-	public Pizza getPizzaByIndex(int index) throws PizzaException{
-		// TO DO
+	public Pizza getPizzaByIndex(int index) throws PizzaException
+	{
+		
+		try
+		{
+			
+			return pizzas.get(index);
+			
+		} catch (IndexOutOfBoundsException e)
+		{
+			
+			throw new PizzaException("Index: " + index + " is invalid.");
+						
+		}		
+		
 	}
 	
 	/**
@@ -91,8 +112,9 @@ public class PizzaRestaurant {
 	 * 
 	 * @return the number of objects contained in the pizzas field.
 	 */
-	public int getNumPizzaOrders(){
-		// TO DO
+	public int getNumPizzaOrders()
+	{
+		return pizzas.size();
 	}
 
 	/**
@@ -101,7 +123,8 @@ public class PizzaRestaurant {
 	 * 
 	 * @return the number of objects contained in the customers field.
 	 */
-	public int getNumCustomerOrders(){
+	public int getNumCustomerOrders()
+	{
 		return customers.size();
 	}
 
@@ -112,12 +135,15 @@ public class PizzaRestaurant {
 	 * 
 	 * @return the total delivery distance for all Customers objects in the customers field.
 	 */
-	public double getTotalDeliveryDistance(){
+	public double getTotalDeliveryDistance()
+	{
+		
 		double sum = 0;
 		for (Customer customer : customers) {
 			sum += customer.getDeliveryDistance();
 		}
 		return sum;	
+		
 	}
 
 	/**
@@ -125,8 +151,18 @@ public class PizzaRestaurant {
 	 * 
 	 * @return the total profit for all of the Pizza objects in the pizzas field.
 	 */	
-	public double getTotalProfit(){
-		// TO DO
+	public double getTotalProfit()
+	{
+		double profit = 0;
+		// For each pizza, get the orders profit and add to total profit
+		for(Pizza pizza: pizzas)
+		{
+			
+			profit += pizza.getOrderProfit();
+			
+		}
+		
+		return profit;
 	}
 	
 	/**
@@ -135,9 +171,10 @@ public class PizzaRestaurant {
 	 * <P> PRE: True
 	 * <P> POST:  The pizzas and customers fields are set to their initial empty states
 	 */
-	public void resetDetails(){
+	public void resetDetails()
+	{
 		pizzas.clear();
-		customers.clear();	
+		customers.clear();
 	}
 
 }
