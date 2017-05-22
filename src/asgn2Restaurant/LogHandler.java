@@ -1,18 +1,24 @@
 package asgn2Restaurant;
 
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import asgn2Customers.Customer;
+import asgn2Customers.CustomerFactory;
 import asgn2Exceptions.CustomerException;
 import asgn2Exceptions.LogHandlerException;
 import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
+import asgn2Pizzas.PizzaFactory;
 
 /**
  *
@@ -20,11 +26,10 @@ import asgn2Pizzas.Pizza;
  * and Customer object - either as an individual Pizza/Customer object or as an
  * ArrayList of Pizza/Customer objects.
  * 
- * @author Person A and Alexander O'Dempsey
+ * @author Daniel Larmar and Alexander O'Dempsey
  *
  */
 public class LogHandler {
-	
 
 
 	/**
@@ -50,6 +55,7 @@ public class LogHandler {
 		
 		//return the data list
 		return list;	
+		
 	}		
 
 	/**
@@ -60,8 +66,49 @@ public class LogHandler {
 	 * @throws LogHandlerException If there was a problem with the log file not related to the semantic errors above
 	 * 
 	 */
-	public static ArrayList<Pizza> populatePizzaDataset(String filename) throws PizzaException, LogHandlerException{
-		// TO DO
+	public static ArrayList<Pizza> populatePizzaDataset(String filename) throws PizzaException, LogHandlerException
+	{
+		
+		// Create Pizza dataset
+		ArrayList<Pizza> PizzaDS = new ArrayList<Pizza>();
+		
+		try
+		{
+			
+			// Read each line of the file
+	        BufferedReader br = new BufferedReader(new FileReader(filename));
+	        
+	        // For each line
+	        for(String line; (line = br.readLine()) != null;)
+	        {
+	        	
+	        	try
+	        	{
+	        		
+		        	// create the pizza and add it to the dataset
+		        	PizzaDS.add(createPizza(line));
+		        	
+	        	}catch(Exception e)
+	        	{
+	        	
+	        		throw new PizzaException("Error adding the line to the dataset: \n" + line);
+	        		
+	        	}	        			
+	        	
+	        }
+	        
+	        br.close();
+	        
+		}catch(Exception e)
+		{
+			
+			throw new LogHandlerException("Error reading the file: " + filename);
+			
+		}
+		
+		// Return the list of pizzas
+		return PizzaDS;
+		
 	}		
 
 	
@@ -100,7 +147,8 @@ public class LogHandler {
 			throw new LogHandlerException("Bad locationY data on parsed line:\n" + line + "\nData: " + lines[6]);
 		}
 		
-		return CustomerFactory.getCustomer(customerCode, name, mobileNumber, locationX, locationY);	
+		return CustomerFactory.getCustomer(customerCode, name, mobileNumber, locationX, locationY);
+		
 	}
 	
 	/**
@@ -111,8 +159,77 @@ public class LogHandler {
 	 * @throws PizzaException If the log file contains semantic errors leading that violate the pizza constraints listed in Section 5.3 of the Assignment Specification or contain an invalid pizza code (passed by another class).
 	 * @throws LogHandlerException - If there was a problem parsing the line from the log file.
 	 */
-	public static Pizza createPizza(String line) throws PizzaException, LogHandlerException{
-		// TO DO		
+	public static Pizza createPizza(String line) throws PizzaException, LogHandlerException
+	{
+		
+		// Splits the lines on ',' into an array.
+		String[] lines = line.split(",");
+		
+		if(lines.length != 9) // Check if the array meets length requirements
+		{
+			
+			throw new LogHandlerException("The following line is not formatted correctly: \n" + line);
+			
+		}
+		
+		// Formatter
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:MM:SS");
+		// Declare variables to store pizza data
+		LocalTime orderTime = null;
+		LocalTime deliveryTime = null;
+		int quantity = 0;
+		String type = lines[7];
+		
+		// Check if the type is a valid pizza type
+		if(!type.equals("PZM") || !type.equals("PZV") || !type.equals("PZL"))
+		{
+			
+			// Throw exception
+			throw new PizzaException("Error on line: \n" + line + ": " + type + " is not a valid pizza name.");
+			
+		}
+		
+		try
+		{
+			
+			orderTime = LocalTime.parse(lines[0],formatter); // Try parse the orderTime with the correct format
+			
+		}catch(Exception e)
+		{
+			
+			// if an exception occurs throw message
+			throw new LogHandlerException("The orderTime: " + lines[0] + " is not a vaild format. Expected: HH:MM:SS");
+			
+		}
+		
+		try
+		{
+			
+			deliveryTime = LocalTime.parse(lines[1], formatter); // Try parse the deliveryTime with correct format
+			
+		}catch(Exception e)
+		{
+			
+			// if an exception occurs throw message
+			throw new LogHandlerException("The deliveryTime: " + lines[1] + " is not a vaild format. Expected: HH:MM:SS");			
+			
+		}
+		
+		try
+		{
+			
+			quantity = Integer.parseInt(lines[8]); // Try parse the quantity
+			
+		}catch(Exception e)
+		{
+			
+			// if an exception occurs throw message
+			throw new LogHandlerException("The quantity: " + lines[8] + " is not a valid quantity. Expected: int");
+			
+		}		
+		
+		return PizzaFactory.getPizza(type, quantity, orderTime, deliveryTime);
+		
 	}
 
 }
