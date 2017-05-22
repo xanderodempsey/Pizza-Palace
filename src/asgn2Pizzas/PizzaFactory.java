@@ -30,40 +30,21 @@ public class PizzaFactory {
 	 * */
 	
 	public static Pizza getPizza(String pizzaCode, int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException
-	{
+	{		
 		
-		// If the pizza code isn't one of the existing pizzas
-		if(!pizzaCode.equals("PZL") && !pizzaCode.equals("PZV") && !pizzaCode.equals("PZM"))
-		{
-			
-			// Throw the exception:
-			throw new PizzaException(pizzaCode + " is not a valid pizza name. Please enter a valid pizza type: PZL, PZM or PZV.");
-			
-		}
-		else // The pizza is a valid code
-		{
-			
-			if(pizzaCode.equals("PZL")) // If the pizza is a meat lovers:
+			switch(pizzaCode)
 			{
-				
-				return new MeatLoversPizza(quantity, orderTime, deliveryTime);
-				
-			}
-			else if(pizzaCode.equals("PZV")) // If the pizza is a vegetarian:
-			{
-				
-				return new VegetarianPizza(quantity, orderTime, deliveryTime);
-				
-			}
-			else // The pizza has to be a margherita otherwise would've throw exception:
-			{
-				
-				return new MargheritaPizza(quantity, orderTime, deliveryTime);
-			
+				case "PZL":// If the pizza is a meat lovers:
+					return new MeatLoversPizza(quantity, orderTime, deliveryTime);
+				case "PZV":// If the pizza is a vegetarian:				
+					return new VegetarianPizza(quantity, orderTime, deliveryTime);
+				case "PZM":// If the pizza is a margherita:	
+					return new MargheritaPizza(quantity, orderTime, deliveryTime);
+				default: // If the pizza code isn't one of the existing pizzas
+					// Throw the exception:
+					throw new PizzaException(pizzaCode + " is not a valid pizza name. Please enter a valid pizza type: PZL, PZM or PZV.");
 			}
 			
-		}
-		
 	}
 
 }
