@@ -62,7 +62,7 @@ public class PizzaRestaurant {
 		
 		customers = LogHandler.populateCustomerDataset(filename);
 		pizzas = LogHandler.populatePizzaDataset(filename);
-		return true;	
+		return true;
 		
 	}
 

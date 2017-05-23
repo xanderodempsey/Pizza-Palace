@@ -91,7 +91,7 @@ public class LogHandler {
 	        	}catch(Exception e)
 	        	{
 	        	
-	        		throw new PizzaException("Error adding the line to the dataset: \n" + line);
+	        		throw (e);
 	        		
 	        	}	        			
 	        	
@@ -224,9 +224,19 @@ public class LogHandler {
 			// if an exception occurs throw message
 			throw new LogHandlerException("The quantity: " + lines[8] + " is not a valid quantity. Expected: int");
 			
-		}		
+		}	
 		
-		return PizzaFactory.getPizza(type, quantity, orderTime, deliveryTime);
+		try
+		{
+			
+			return PizzaFactory.getPizza(type, quantity, orderTime, deliveryTime);
+			
+		}catch(Exception e)
+		{
+			
+			throw (e);
+			
+		}
 		
 	}
 
