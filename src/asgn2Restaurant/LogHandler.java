@@ -99,7 +99,7 @@ public class LogHandler {
 	        
 	        br.close();
 	        
-		}catch(Exception e)
+		}catch(IOException e)
 		{
 			
 			throw new LogHandlerException("Error reading the file: " + filename);
