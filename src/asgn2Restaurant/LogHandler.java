@@ -129,7 +129,7 @@ public class LogHandler {
 		}
 		
 		//reference the following lines as strings 
-		String customerCode = lines[5];
+		String customerCode = lines[4];
 		String name = lines[2];
 		String mobileNumber = lines[3];
 		
@@ -172,8 +172,6 @@ public class LogHandler {
 			
 		}
 		
-		// Formatter
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:MM:SS");
 		// Declare variables to store pizza data
 		LocalTime orderTime = null;
 		LocalTime deliveryTime = null;
@@ -181,7 +179,7 @@ public class LogHandler {
 		String type = lines[7];
 		
 		// Check if the type is a valid pizza type
-		if(!type.equals("PZM") || !type.equals("PZV") || !type.equals("PZL"))
+		if(!type.equals("PZM") && !type.equals("PZV") && !type.equals("PZL"))
 		{
 			
 			// Throw exception
@@ -192,7 +190,7 @@ public class LogHandler {
 		try
 		{
 			
-			orderTime = LocalTime.parse(lines[0],formatter); // Try parse the orderTime with the correct format
+			orderTime = LocalTime.parse(lines[0]); // Try parse the orderTime with the correct format
 			
 		}catch(Exception e)
 		{
@@ -205,7 +203,7 @@ public class LogHandler {
 		try
 		{
 			
-			deliveryTime = LocalTime.parse(lines[1], formatter); // Try parse the deliveryTime with correct format
+			deliveryTime = LocalTime.parse(lines[1]); // Try parse the deliveryTime with correct format
 			
 		}catch(Exception e)
 		{
