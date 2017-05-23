@@ -42,7 +42,7 @@ public class PizzaFactory {
 					return new MargheritaPizza(quantity, orderTime, deliveryTime);
 				default: // If the pizza code isn't one of the existing pizzas
 					// Throw the exception:
-					throw new PizzaException(pizzaCode + " is not a valid pizza name. Please enter a valid pizza type: PZL, PZM or PZV.");
+					throw new PizzaException("Order isn't valid. Please enter a valid Pizza Order.");
 			}
 			
 	}
