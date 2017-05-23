@@ -35,11 +35,41 @@ public class PizzaFactory {
 			switch(pizzaCode)
 			{
 				case "PZL":// If the pizza is a meat lovers:
-					return new MeatLoversPizza(quantity, orderTime, deliveryTime);
-				case "PZV":// If the pizza is a vegetarian:				
-					return new VegetarianPizza(quantity, orderTime, deliveryTime);
+					try
+					{
+						
+						return new MeatLoversPizza(quantity, orderTime, deliveryTime);
+						
+					}catch(Exception e)
+					{
+						
+						throw (e);		
+						
+					}
+				case "PZV":// If the pizza is a vegetarian:			
+					try
+					{
+						
+						return new VegetarianPizza(quantity, orderTime, deliveryTime);
+						
+					}catch(Exception e)
+					{
+						
+						throw (e);		
+						
+					}
 				case "PZM":// If the pizza is a margherita:	
-					return new MargheritaPizza(quantity, orderTime, deliveryTime);
+					try
+					{
+						
+						return new MargheritaPizza(quantity, orderTime, deliveryTime);
+						
+					}catch(Exception e)
+					{
+						
+						throw (e);	
+						
+					}
 				default: // If the pizza code isn't one of the existing pizzas
 					// Throw the exception:
 					throw new PizzaException("Order isn't valid. Please enter a valid Pizza Order.");
