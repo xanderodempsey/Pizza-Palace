@@ -68,12 +68,21 @@ public class LogHandlerCustomerTests
 		
 	}
 	
-	//Lower Level Exception handling check: Should come back with CustomerException
+	//Lower Level Exception handling check: Should come back with CustomerException as phone number has 0
 	@Test(expected = CustomerException.class)
-	public void TestLowerLevelExceptions() throws CustomerException, LogHandlerException
+	public void TestLowerLevelExceptions1() throws CustomerException, LogHandlerException
 	{
 		
 		LogHandler.createCustomer("19:00:00,19:20:00,Casey Jones,1123456789,DVC,5,5,PZV,2");
+		
+	}
+	
+	//Lower Level Exception handling check: Should come back with CustomerException as pickup is not (0,0)
+	@Test(expected = CustomerException.class)
+	public void TestLowerLevelExceptions2() throws CustomerException, LogHandlerException
+	{
+		
+		LogHandler.createCustomer("19:00:00,19:20:00,Casey Jones,0123456789,PUC,0,5,PZV,2");
 		
 	}
 	

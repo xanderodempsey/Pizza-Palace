@@ -93,6 +93,33 @@ public class CustomerTests
 		
 	}
 	
+	//Pick up location with not 0,0
+	@Test(expected = CustomerException.class)
+	public void NewCustomerPickUpLocationError1() throws CustomerException
+	{
+		
+		PickUpTest = new PickUpCustomer("April O'Neal","0987654321",3,4);
+		
+	}
+	
+	//Pick up location with not 0,0
+	@Test(expected = CustomerException.class)
+	public void NewCustomerPickUpLocationError2() throws CustomerException
+	{
+		
+		PickUpTest = new PickUpCustomer("April O'Neal","0987654321",0,4);
+		
+	}
+	
+	//Delivery location != 0,0
+	@Test(expected = CustomerException.class)
+	public void NewCustomerDeliveryCannotBeStoreError1() throws CustomerException
+	{
+		
+		DriverTest = new DriverDeliveryCustomer("Casey Jones","0123456789",0,0);
+		
+	}
+	
 	// Functions to test
 	public String GetCustName(Customer customer)
 	{

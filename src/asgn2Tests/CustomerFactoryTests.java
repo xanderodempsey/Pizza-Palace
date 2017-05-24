@@ -16,18 +16,34 @@ import asgn2Customers.CustomerFactory;
 public class CustomerFactoryTests 
 {
 	
-	//Errorless test
+	//Errorless tests
 	@Test
-	public void GetCustomerTest() throws CustomerException
+	public void GetCustomerDriverDeliveryTest() throws CustomerException
 	{
 
 			CustomerFactory.getCustomer("DVC", "Casey Jones", "0123456789", 5, 5);
 			
 	}
 	
+	@Test
+	public void GetCustomerDroneDeliveryTest() throws CustomerException
+	{
+
+			CustomerFactory.getCustomer("DNC", "Casey Jones", "0123456789", 5, 5);
+			
+	}
+	
+	@Test
+	public void GetCustomerPickUpTest() throws CustomerException
+	{
+
+			CustomerFactory.getCustomer("PUC", "Casey Jones", "0123456789", 0, 0);
+			
+	}
+	
 	//Not one of the three pick modes
 	@Test(expected = CustomerException.class)
-	public void GetCustomerErrorEmpty() throws CustomerException
+	public void GetCustomerErrorEmptyCode() throws CustomerException
 	{
 		
 		CustomerFactory.getCustomer("", "Casey Jones", "0123456789", 5, 5);
@@ -36,7 +52,7 @@ public class CustomerFactoryTests
 	
 	//Another Test
 	@Test(expected = CustomerException.class)
-	public void GetCustomerErrorInvalid() throws CustomerException
+	public void GetCustomerErrorInvalidCode() throws CustomerException
 	{
 		
 		CustomerFactory.getCustomer("PZL", "Casey Jones", "0123456789", 5, 5);
