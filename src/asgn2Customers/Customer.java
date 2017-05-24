@@ -38,6 +38,7 @@ public abstract class Customer {
 		this.type = type;
 		this.locationX = locationX;
 		this.locationY = locationY;	
+		int firstMobNum = Integer.parseInt(mobileNumber.substring(0, 1));
 		
 		if(name == "" || name == null) {
 			throw new CustomerException("The customer's name is an empty string or is null.");
@@ -51,10 +52,10 @@ public abstract class Customer {
 		if(mobileNumber == "" || mobileNumber == null) {
 			throw new CustomerException("The mobile number is an empty string or is null.");
 		}
-		if(mobileNumber.length() != 9) {
+		if(mobileNumber.length() != 10) {
 			throw new CustomerException("The mobile number must be 10 digits long.");
 		}
-		if(mobileNumber.substring(0, 1) != "0") {
+		if(firstMobNum != 0){
 			throw new CustomerException("The mobile number must start with a 0.");
 		}
 		if(type == "" || type == null) {
