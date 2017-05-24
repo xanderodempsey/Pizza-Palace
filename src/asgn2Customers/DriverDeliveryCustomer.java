@@ -31,10 +31,10 @@ public class DriverDeliveryCustomer extends Customer {
 		super(name, mobileNumber, locationX, locationY, "Driver Delivery");
 		
 		if(name == "" || name == null) {
-			throw new CustomerException("customerName is an empty string or is null");
+			throw new CustomerException("Customer's name is an empty string or is null");
 		}
 		if(mobileNumber == "" || mobileNumber == null) {
-			throw new CustomerException("customerMobileNumber is an empty string or is null");
+			throw new CustomerException("The mobile phone number is an empty string or is null");
 		}
 		if(locationX == 0 && locationY == 0) {
 			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
