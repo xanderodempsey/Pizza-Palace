@@ -31,7 +31,7 @@ public class CustomerFactory {
 		switch(customerCode) {
 			case "DVC":
 				try {
-					return new PickUpCustomer(name, mobileNumber, locationX, locationY);
+					return new DriverDeliveryCustomer(name, mobileNumber, locationX, locationY);
 				} catch(Exception e) {
 					throw (e);
 				}
@@ -43,7 +43,7 @@ public class CustomerFactory {
 				}
 			case "PUC":
 				try {
-					return new DriverDeliveryCustomer(name, mobileNumber, locationX, locationY);
+					return new PickUpCustomer(name, mobileNumber, locationX, locationY);
 				} catch(Exception e) {
 					throw (e);
 				}
