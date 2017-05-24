@@ -29,14 +29,26 @@ public class CustomerFactory {
 	 */
 	public static Customer getCustomer(String customerCode, String name, String mobileNumber, int locationX,  int locationY) throws CustomerException{
 		switch(customerCode) {
-		case "DVC":
-			return new PickUpCustomer(name, mobileNumber, locationX, locationY);
-		case "DNC":
-			return new DroneDeliveryCustomer(name, mobileNumber, locationX, locationY);
-		case "PUC":
-			return new DriverDeliveryCustomer(name, mobileNumber, locationX, locationY);
+			case "DVC":
+				try {
+					return new PickUpCustomer(name, mobileNumber, locationX, locationY);
+				} catch(Exception e) {
+					throw (e);
+				}
+			case "DNC":
+				try {
+					return new DroneDeliveryCustomer(name, mobileNumber, locationX, locationY);
+				} catch(Exception e) {
+					throw (e);
+				}
+			case "PUC":
+				try {
+					return new DriverDeliveryCustomer(name, mobileNumber, locationX, locationY);
+				} catch(Exception e) {
+					throw (e);
+				}
+			default:
+				throw new CustomerException("Customer code not valid for factory to generate instace of Customer.class.\nInput: " + customerCode);
 		}
-		
-		throw new CustomerException("Customer code not valid for factory to generate instace of Customer.class.\nInput: " + customerCode);
 	}
 }
