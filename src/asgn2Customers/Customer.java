@@ -61,6 +61,22 @@ public abstract class Customer {
 		if(type == "" || type == null) {
 			throw new CustomerException("customerType is an empty string or is null.");
 		}
+				
+		if(locationX == 0 && locationY == 0) {
+			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
+		}
+		if(locationX > 10 ) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
+		}
+		if(locationX < -10 ) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks West");
+		}
+		if(locationY > 10) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks North");
+		}
+		if(locationY < -10) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks South");
+		}
 	}
 	
 	/**
