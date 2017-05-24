@@ -30,22 +30,6 @@ public class DroneDeliveryCustomer extends Customer {
 	 */
 	public DroneDeliveryCustomer(String name, String mobileNumber, int locationX, int locationY) throws CustomerException {
 		super(name, mobileNumber, locationX, locationY, "Drone Delivery");	
-		
-		if(locationX == 0 && locationY == 0) {
-			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
-		}
-		if(locationX > 10 ) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
-		}
-		if(locationX < -10 ) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks West");
-		}
-		if(locationY > 10) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks North");
-		}
-		if(locationY < -10) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks South");
-		}
 	}
 
 	/**
