@@ -18,8 +18,9 @@ public class LogHandlerCustomerTests
 	@Test
 	public void PopulateCustomerDatasetErrorLess() throws CustomerException, LogHandlerException
 	{
-
-		LogHandler.populateCustomerDataset("C:\\Users\\daniel.larmar\\Desktop\\20170101.txt");
+		
+		String file = (System.getProperty("user.dir") + "\\logs\\20170101.txt");
+		LogHandler.populateCustomerDataset(file);
 		
 	}
 	
@@ -28,7 +29,7 @@ public class LogHandlerCustomerTests
 	public void PopulateCustomerDatasetWrongFileError() throws CustomerException, LogHandlerException
 	{
 
-		LogHandler.populateCustomerDataset("C:\\Users\\daniel.larmar\\Desktop\\ErrorFileName.txt");
+		LogHandler.populateCustomerDataset("ErrorFileName.txt");
 		
 	}
 	
