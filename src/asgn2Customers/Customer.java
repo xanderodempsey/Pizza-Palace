@@ -38,6 +38,28 @@ public abstract class Customer {
 		this.type = type;
 		this.locationX = locationX;
 		this.locationY = locationY;	
+		
+		if(name == "" || name == null) {
+			throw new CustomerException("The customer's name is an empty string or is null.");
+		}
+		if(name.length() < 1 || name.length() > 20) {
+			throw new CustomerException("The customer's name requires between 1 to 20 characters.");
+		}
+		if(name.matches(" ")) {
+			throw new CustomerException("The customer's name cannot be filled with only white spaces.");
+		}
+		if(mobileNumber == "" || mobileNumber == null) {
+			throw new CustomerException("The mobile number is an empty string or is null.");
+		}
+		if(mobileNumber.length() != 9) {
+			throw new CustomerException("The mobile number must be 10 digits long.");
+		}
+		if(mobileNumber.substring(0, 1) != "0") {
+			throw new CustomerException("The mobile number must start with a 0.");
+		}
+		if(type == "" || type == null) {
+			throw new CustomerException("customerType is an empty string or is null.");
+		}
 	}
 	
 	/**
