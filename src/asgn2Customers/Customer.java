@@ -63,10 +63,13 @@ public abstract class Customer {
 		}
 		
 		if(this.getCustomerType().equals("Pick Up")) {
-				if(locationX != 0 && locationY != 0) {
-					throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
-				}
+			if(locationX != 0 && locationY != 0) {
+				throw new CustomerException("Customers pickup location is not the location of the restaurant");
+			}
 		} else {
+			if(locationX == 0 && locationY == 0) {
+				throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
+			}
 			if(locationX > 10 ) {
 				throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
 			}
