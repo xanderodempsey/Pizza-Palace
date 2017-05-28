@@ -63,7 +63,7 @@ public abstract class Pizza  {
 			throw new PizzaException("Please Order Before 11:00pm Local Time"); // throw exception
 			
 		}
-		else if(!type.equals("PZL") && !type.equals("PZM") && !type.equals("PZV")) // If the pizza not a valid pizza type
+		else if(!type.equals("Meat Lovers") && !type.equals("Vegetarian") && !type.equals("Margherita")) // If the pizza not a valid pizza type
 		{
 			
 			throw new PizzaException(type + " is not a valid pizza name. Please enter a valid pizza type: PZL, PZM or PZV."); // Throw the exception						

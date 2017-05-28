@@ -41,7 +41,7 @@ public class VegetarianPizza extends Pizza {
 	{
 		
 		// Store Pizza variables
-		super(quantity,orderTime,deliveryTime,"PZV", 10);
+		super(quantity,orderTime,deliveryTime,"Vegetarian", 10);
 		
 	}
 
