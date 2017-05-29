@@ -1,0 +1,378 @@
+* a6dd41e : Added formatting to profit, distance, cost
+* 42b0157 : Completed Classes
+* 5517815 : Formatting needs to be done. Look for //TODO
+* 8bdcfae : Added Tests for Pizza features in LogHandler.Java
+* 0e61423 : Added tests for Pizza part of Restaurant.Java
+* fd175d8 : Added tests for PizzaFactory.Java
+* ca466d2 : Added tests for Pizza.java
+* bbf54a4 : Completed Customer Tests
+* 1872f8d : Uploaded for tests
+* a4b4a21 : Add files via upload
+* cf84b42 : Add files via upload
+* 08ee2ff : Update Customer.java
+* 7dc4eb1 : Update CustomerFactory.java
+* ffe9586 : Update Customer.java
+* d68a67e : Update Customer.java
+* b9566b7 : Update Customer.java
+* 672d0f8 : Update Customer.java
+* b61753f : Update DriverDeliveryCustomer.java
+* b53b6e9 : Update DroneDeliveryCustomer.java
+* 4d2cfa0 : Updated
+* 61eab16 : Updated
+* 8dcdc42 : Updated
+* f56b26f : Add files via upload
+* d5455a9 : Fixed exception
+* 6e1e232 : Accidentally put exceptions in - now deleted
+* 7aaea42 : Update DriverDeliveryCustomer.java
+* 47dcc50 : Added exceptions
+* 0ecc2ea : Added exceptions for Customer.java
+* 174ae0f : Add files via upload
+* 59f82fc : Add files via upload
+* a19b275 : Add files via upload
+* c2381fa : Add files via upload
+* 20d0161 : Add files via upload
+* ce997cb : Java file uploaded to wrong directory
+* a399cf2 : Java file uploaded to wrong directory
+* 83ad0cb : Java file uploaded to wrong directory
+* 4f902b9 : Java file uploaded to wrong directory
+* db9528c : Java file uploaded to wrong directory
+* e056d3c : Java file uploaded to wrong directory
+* 774d089 : Add files via upload
+* 9dcf24b : Add files via upload
+* 86773a0 : Add files via upload
+* 55d4863 : Add files via upload
+* 2f2b934 : Add files via upload
+* 5f93559 : Add files via upload
+* 01c7ab4 : LogHandler and PizzaRestaurant PersonB stuff done
+* 57a632b : Customer class updated
+* 7dbe904 : Fixed typos
+* 6c318c6 : Changed PizzaResturant.processLog to say 'true if the file was process correctly'
+* d209e25 : Updating log files to remove empty final line
+* 434d3ad : .
+* f748592 : .
+* dfba347 : .
+* e951c1e : .commit a6dd41ea2364cf566b0ab8b622a9b07ac5adcd3f
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Mon May 29 10:42:10 2017 +1000
+
+    Added formatting to profit, distance, cost
+
+commit 42b0157ef02fcdb5f9dac48ebdeabd2efad53f9e
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Sun May 28 18:52:41 2017 +1000
+
+    Completed Classes
+
+commit 5517815066bc9c21ea0bc2d37c733c87aa1970f6
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Sun May 28 18:51:53 2017 +1000
+
+    Formatting needs to be done. Look for //TODO
+
+commit 8bdcfae249bdb98d65d7f77b00303575dc9a0bf8
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Fri May 26 13:45:31 2017 +1000
+
+    Added Tests for Pizza features in LogHandler.Java
+
+commit 0e61423318b64213a8fba4c840ffaa9b26a0220a
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Thu May 25 11:51:41 2017 +1000
+
+    Added tests for Pizza part of Restaurant.Java
+
+commit fd175d88773511b00c4274a485cce006d61cc86c
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Thu May 25 10:04:17 2017 +1000
+
+    Added tests for PizzaFactory.Java
+
+commit ca466d2633cc25a902c0d574f96697c3779abeb2
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 16:46:39 2017 +1000
+
+    Added tests for Pizza.java
+
+commit bbf54a45202b012b5d0d18aa02ac35f46bb3c948
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Wed May 24 14:24:05 2017 +1000
+
+    Completed Customer Tests
+
+commit 1872f8d6bfdab75b7ab6f6411aa49d3c3c75b3b2
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Wed May 24 14:23:32 2017 +1000
+
+    Uploaded for tests
+
+commit a4b4a2149ad0403c82bffe3d432e5c49769de8c3
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Wed May 24 13:52:43 2017 +1000
+
+    Add files via upload
+
+commit cf84b420a5c7c90128702d3467c6c29b823f8b7e
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Wed May 24 13:32:48 2017 +1000
+
+    Add files via upload
+
+commit 08ee2ff7cd821127e2b31144d32a244601124280
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 13:29:13 2017 +1000
+
+    Update Customer.java
+
+commit 7dc4eb137468ce7a1ee9ce335e3dcaf678a2dba4
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 13:19:06 2017 +1000
+
+    Update CustomerFactory.java
+
+commit ffe9586dad84b488721054b24f25e2771bc3146f
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 13:12:11 2017 +1000
+
+    Update Customer.java
+
+commit d68a67ec69a91217170ee19e83f5db276a928b4f
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:56:04 2017 +1000
+
+    Update Customer.java
+
+commit b9566b75f2418196b4032d8c33558394058ca180
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:52:07 2017 +1000
+
+    Update Customer.java
+
+commit 672d0f8d5129053b239e1e43f1e2454b3fbc41e9
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:37:45 2017 +1000
+
+    Update Customer.java
+
+commit b61753f9e410d6cb492bff0c87b5175f0215774d
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:37:24 2017 +1000
+
+    Update DriverDeliveryCustomer.java
+
+commit b53b6e956214c1e49cf06c3593123c18579bc4c8
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:37:06 2017 +1000
+
+    Update DroneDeliveryCustomer.java
+
+commit 4d2cfa059c6e958666d56a7c77cba16f0ac1b264
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:34:41 2017 +1000
+
+    Updated
+
+commit 61eab16626bddf4f6ce1abf0e20351e9b79918b5
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:34:19 2017 +1000
+
+    Updated
+
+commit 8dcdc42d9bf6d9bc10ef06f7acb2242875206ce6
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 12:24:01 2017 +1000
+
+    Updated
+
+commit f56b26fe5f79211f300503c91668b8afb4ff7a51
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Wed May 24 11:00:19 2017 +1000
+
+    Add files via upload
+
+commit d5455a936394712bdc7937a434440abf959fc41a
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 10:58:19 2017 +1000
+
+    Fixed exception
+
+commit 6e1e232544b307cda6e50379686240a00fe3eb54
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 10:24:43 2017 +1000
+
+    Accidentally put exceptions in - now deleted
+
+commit 7aaea423336449fe0fa90145c1b77b22b97552a2
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 10:19:26 2017 +1000
+
+    Update DriverDeliveryCustomer.java
+
+commit 47dcc5049752762fbc7b78f89f94e310d9dce4a8
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 10:18:16 2017 +1000
+
+    Added exceptions
+
+commit 0ecc2ead1a55d2e1d4c87fd8f288dea830f027fb
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Wed May 24 10:10:54 2017 +1000
+
+    Added exceptions for Customer.java
+
+commit 174ae0f923b2c7aee3e9d5277889a8d2ebf6a9a9
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Wed May 24 09:55:08 2017 +1000
+
+    Add files via upload
+
+commit 59f82fc6d8aef52ede2e340bade9ffbafdffe767
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 17:05:37 2017 +1000
+
+    Add files via upload
+
+commit a19b275b083cd24285df180224d1b8c136a2c4b6
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 17:02:36 2017 +1000
+
+    Add files via upload
+
+commit c2381fa13ec96ae076fbb4ccae4d194081c1bdd5
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 15:11:08 2017 +1000
+
+    Add files via upload
+
+commit 20d0161617e283afa16b929ecfa5b031bb6fb3b3
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 13:23:04 2017 +1000
+
+    Add files via upload
+
+commit ce997cb73b8f3cba5e049834798de6dd403b1a39
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Tue May 23 09:33:30 2017 +1000
+
+    Java file uploaded to wrong directory
+
+commit a399cf2fc7c05b77ce51189052b476c7a81ca552
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Tue May 23 09:33:20 2017 +1000
+
+    Java file uploaded to wrong directory
+
+commit 83ad0cb1e622ee6892129c9f14a6697d8d3ee59e
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Tue May 23 09:33:09 2017 +1000
+
+    Java file uploaded to wrong directory
+
+commit 4f902b9426ea15b287fd6a01a2d00c491fc8bf0e
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Tue May 23 09:32:58 2017 +1000
+
+    Java file uploaded to wrong directory
+
+commit db9528c58e31554d64043f4e50b6cc7954e1abe7
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Tue May 23 09:32:44 2017 +1000
+
+    Java file uploaded to wrong directory
+
+commit e056d3c370851455e9abc181c2d33da106cc6053
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Tue May 23 09:32:31 2017 +1000
+
+    Java file uploaded to wrong directory
+
+commit 774d0892f566ab15afcbd95b2ded64510551ecf6
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 09:06:52 2017 +1000
+
+    Add files via upload
+
+commit 9dcf24b968e237bea82e5ecb3319d9bcf0184f3e
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 09:00:11 2017 +1000
+
+    Add files via upload
+
+commit 86773a00d42f5b4f20e081b3453c96b6397137f2
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 08:58:24 2017 +1000
+
+    Add files via upload
+
+commit 55d4863f6a7ce8957e3369333b262b07ac76202d
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 08:42:01 2017 +1000
+
+    Add files via upload
+
+commit 2f2b9342190dc55c4e50b455eda4def94c002dc6
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 08:41:35 2017 +1000
+
+    Add files via upload
+
+commit 5f93559c6675040f852e532767244e81b5a17297
+Author: Daniellarmar <daniellarmar@gmail.com>
+Date:   Tue May 23 08:35:33 2017 +1000
+
+    Add files via upload
+
+commit 01c7ab427551320f0986d3861202e07276b000c5
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Mon May 22 11:00:13 2017 +1000
+
+    LogHandler and PizzaRestaurant PersonB stuff done
+
+commit 57a632b43f762b3cd393d045524f38ef3638d37a
+Author: xanderodempsey <xander-odempsey@hotmail.com>
+Date:   Mon May 22 10:57:47 2017 +1000
+
+    Customer class updated
+    
+    Possibly finished - will know when testing has been worked on.
+
+commit 7dbe90423b6813ca34e96d1fe9842db7ba03687c
+Author: alan <awoodley@qut.edu.au>
+Date:   Fri May 5 17:04:42 2017 +1000
+
+    Fixed typos
+
+commit 6c318c6355efac47ebaa1b4fbebad97b232c2e2e
+Author: alan <awoodley@qut.edu.au>
+Date:   Fri May 5 17:02:09 2017 +1000
+
+    Changed PizzaResturant.processLog to say 'true if the file was process correctly'
+
+commit d209e252f0d37ea6593fdbaf85b7eeb820a79667
+Author: alan <awoodley@qut.edu.au>
+Date:   Fri May 5 16:52:17 2017 +1000
+
+    Updating log files to remove empty final line
+
+commit 434d3ada012f0e03d37b9527d8f9bdff01ca572b
+Author: alan <awoodley@qut.edu.au>
+Date:   Tue Apr 25 18:36:28 2017 +1000
+
+    .
+
+commit f748592b2f1fe58edc493dfacce042ef85c91244
+Author: alan <awoodley@qut.edu.au>
+Date:   Tue Apr 25 18:05:34 2017 +1000
+
+    .
+
+commit dfba34718a2fd75e1bc3721b8770c7466003ab56
+Author: alan <awoodley@qut.edu.au>
+Date:   Tue Apr 25 18:04:54 2017 +1000
+
+    .
+
+commit e951c1e8b6ea69b11df52b6f3f175173c920375e
+Author: awoodley <a.woodley@qut.edu.au>
+Date:   Tue Apr 25 06:32:36 2017 +0000
+
+    .
