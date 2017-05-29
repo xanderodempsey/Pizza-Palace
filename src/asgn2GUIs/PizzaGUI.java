@@ -27,14 +27,14 @@ import javax.swing.*;
 
 /**
  * This class is the graphical user interface for the rest of the system. 
- * Currently it is a ‘dummy’ class which extends JFrame and implements Runnable and ActionLister. 
+ * Currently it is a â€˜dummyâ€™ class which extends JFrame and implements Runnable and ActionLister. 
  * It should contain an instance of an asgn2Restaurant.PizzaRestaurant object which you can use to 
  * interact with the rest of the system. You may choose to implement this class as you like, including changing 
- * its class signature – as long as it  maintains its core responsibility of acting as a GUI for the rest of the system. 
+ * its class signature â€“ as long as it  maintains its core responsibility of acting as a GUI for the rest of the system. 
  * You can also use this class and asgn2Wizards.PizzaWizard to test your system as a whole
  * 
  * 
- * @author Person A and Person B
+ * @author Daniel Larmar and Alexander O'Dempsey
  *
  */
 public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionListener {
@@ -219,8 +219,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				if(Loaded == true)
 				{
 					
-					//TODO FORMAT SO IT LOOKS LIKE : $100.00
-					OutputArea.setText("The Total profit from the log is: " + restaurant.getTotalProfit());	
+					DecimalFormat df = new DecimalFormat("#.00");
+					OutputArea.setText("The total profit from the log is: $" + df.format(restaurant.getTotalProfit()));	
 					
 				}else
 				{
@@ -264,6 +264,7 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 						
 							//For each order create the strong
 							//TODO FORMAT THESE VARIABLES AS ACCORDING TO SECTION 13.5 IN SPEC DOCUMENT
+							DecimalFormat df = new DecimalFormat("#.00");
 							String CustomerName = restaurant.getCustomerByIndex(i).getName();
 							String CustomerMob = restaurant.getCustomerByIndex(i).getMobileNumber();
 							String CustomerType = restaurant.getCustomerByIndex(i).getCustomerType();
@@ -281,9 +282,9 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 							//Build
 							OutPut += "Customer " + (i+1) + ": \n Customer Name: " + CustomerName + "\n Mobile Number: " + CustomerMob 
 									+ "\n CustomerType: " + CustomerType + "\n X and Y Location: " + XLocation + ":" + YLocation
-									+ "\n Delivery Distnace from Restaurant: " + Distance + "\n"
-									+ "\n Order " + (i+1) + ": \n Pizza Type: " + PizzaType + "\n Quantity: " + Quantity + "\n Order Price: " 
-									+ OrderPrice + "\n Order Cost: " + OrderCost + "\n Order Profit: " + OrderProfit
+									+ "\n Delivery Distnace from Restaurant: " + df.format(Distance)+ "km" + "\n"
+									+ "\n Order " + (i+1) + ": \n Pizza Type: " + PizzaType + "\n Quantity: " + Quantity + "\n Order Price: $" 
+									+ df.format(OrderPrice) + "\n Order Cost: $" + df.format(OrderCost) + "\n Order Profit: $" + df.format(OrderProfit)
 									+ "\n \n";
 							
 						}
@@ -311,7 +312,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				if(Loaded == true)
 				{
 					//TODO FORMAT SO IT LOOKS LIKE 10KM or whatever the spec wants you to format it like.
-					OutputArea.setText("Total Distance Travelled: " + restaurant.getTotalDeliveryDistance());
+					DecimalFormat df = new DecimalFormat("#.00");
+					OutputArea.setText("Total Distance Travelled: " + df.format(restaurant.getTotalDeliveryDistance()) + "km");
 					
 				}else
 				{
