@@ -263,7 +263,6 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 						{
 						
 							//For each order create the strong
-							//TODO FORMAT THESE VARIABLES AS ACCORDING TO SECTION 13.5 IN SPEC DOCUMENT
 							DecimalFormat df = new DecimalFormat("#.00");
 							String CustomerName = restaurant.getCustomerByIndex(i).getName();
 							String CustomerMob = restaurant.getCustomerByIndex(i).getMobileNumber();
@@ -311,7 +310,7 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				
 				if(Loaded == true)
 				{
-					//TODO FORMAT SO IT LOOKS LIKE 10KM or whatever the spec wants you to format it like.
+
 					DecimalFormat df = new DecimalFormat("#.00");
 					OutputArea.setText("Total Distance Travelled: " + df.format(restaurant.getTotalDeliveryDistance()) + "km");
 					
