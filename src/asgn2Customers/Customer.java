@@ -88,6 +88,9 @@ public abstract class Customer {
 	/**
 	 * Returns the Customer's name.
 	 * @return The Customer's name.
+	 * @throws CustomerException if name is empty string
+	 * @throws CustomerException if name is not between 1-20 characters
+	 * @throws CustomerException if name is filled with only white space
 	 */
 	public final String getName(){
 		return name;
@@ -96,6 +99,9 @@ public abstract class Customer {
 	/**
 	 * Returns the Customer's mobile number.
 	 * @return The Customer's mobile number.
+	 * @throws CustomerException if mobileNumber is empty string
+	 * @throws CustomerException if mobileNumber is less than 10 digits
+	 * @throws CustomerException if mobileNumber doesn't start with a 0
 	 */
 	public final String getMobileNumber(){
 		return mobileNumber;
@@ -105,6 +111,7 @@ public abstract class Customer {
 	 * Returns a human understandable description of the Customer's type. 
 	 * The valid alternatives are listed in Section 5.2 of the Assignment Specification. 
 	 * @return A human understandable description of the Customer's type.
+	 * @throws CustomerException if customerType is empty string
 	 */
 	public final String getCustomerType(){
 		return type;
@@ -114,6 +121,8 @@ public abstract class Customer {
 	 * Returns the Customer's X location which is the number of blocks East or West 
 	 * that the Customer is located relative to the Pizza Palace restaurant. 
 	 * @return The Customer's X location
+	 * @throws CustomerException if locationX is not 0 and they have elected pickup
+	 * @throws CustomerException if locationX is greater than 10, or less than -10 and have elected delivery
 	 */
 	public final int getLocationX(){
 		return locationX;
@@ -123,6 +132,8 @@ public abstract class Customer {
 	 * Returns the Customer's Y location which is the number of blocks North or South 
 	 * that the Customer is located relative to the Pizza Palace restaurant. 
 	 * @return The Customer's Y location
+	 * @throws CustomerException if locationY is not 0 and they have elected pickup
+	 * @throws CustomerException if locationY is greater than 10, or less than -10 and have elected delivery
 	 */
 	public final int getLocationY(){
 			return locationY;
