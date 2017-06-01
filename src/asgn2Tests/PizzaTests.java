@@ -2,7 +2,6 @@ package asgn2Tests;
 
 import java.time.LocalTime;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import asgn2Exceptions.PizzaException;
@@ -73,7 +72,7 @@ public class PizzaTests {
 			
 		//Testing an invalid order time of me
 		@Test(expected = PizzaException.class)
-		public void LateOrderTimeMeatLovers() throws PizzaException {
+		public void lateOrderTimeMeatLovers() throws PizzaException {
 			LocalTime orderTime = LocalTime.of(23, 01);
 			LocalTime deliveryTime = LocalTime.of(23, 20);
 			meatLovers = new MeatLoversPizza(1, orderTime, deliveryTime);
