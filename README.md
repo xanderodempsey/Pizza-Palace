@@ -1,1 +1,1 @@
-All information relating to Assignment 2 can be found on Blackboard
+GUI program that interprets a logging system and displays the order logs for a fictional Pizza restaurant.
